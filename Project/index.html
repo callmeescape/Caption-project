@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookpad- online recipe sharing platfoem</title>
+    <!-- Linking font Awesome for icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <!-- Linking Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- linking google font for icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close"/>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!--Creating Header and Navbar-->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <h2 class="logo-text">Cookpad!</h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times"></button>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#recipes" class="nav-link">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <button id="menu-open-button" class="fas fa-bars"></button>
+            <button class="login-btn">LOG IN</button>
+        </nav>
+    </header>
+    <!-- Popup Form, idea from youtube-->
+     <div class="blur-bg-overlay"></div>
+     <div class="form-popup">
+        <span class="close-btn material-symbols-rounded">close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us. </p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <a href="#" class="forget-pass">forget-password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">Signup</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>Sign up now with your personal information to be part of our growing community.</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" required>
+                        <label>Enter your email</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" required>
+                        <label>Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" id="policy">
+                        <label for="policy">
+                            I agree the
+                            <a href="#">Terms and Conditions</a>
+                        </label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account?
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <main>
+        <!-- Creating Hero section,idea from https://youtu.be/MYFgtnKMDp4?si=99DXHaX35dnHAhXf -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Your Favourite Recipes</h2>
+                    <h3 class="subtitle">Great cooking is about sharing - one recipe, one story, one flavor at a time!</h3>
+                    <p class="description">Welcome to your recipe-sharing hub, share your favorite dishes, explore newflavors, and connect with passionate home cooks worldwide</p>
+
+                    <div class="buttons">
+                        <a href="#" class="button view-recipes">Recipes</a>
+                        <a href="#" class="button contact-us">Contact Us</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="img/chef.png" alt="Hero" class="hero image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Creating About section-->
+        <section class="about-section" id="about">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="img/IMG_9001.JPG" alt="About" class="about-image">
+                </div>
+                <div class="about-details">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="text">At Foodpad, we bring together food lovers from around the world to share recipes, discover exciting new dishes, and connect through a shared passion for cooking. Whether you’re a beginner or a seasoned chef, Foodpad makes it easy to find inspiration, save your favorites, and share your own culinary creations.</p>
+                    <div class="social-link-list">
+                        <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creating Recipes sections-->
+        <section class="recipes-section" id="recipes">
+            <h2 class="section-title">Recipes</h2>
+            <div class="section-content">
+                <ul class="recipes-list">
+                    <li class="recipes-item">
+                        <img src="img/hot-beverages.png" alt="Hot Beverages" 
+                        class="recipes-image">
+                        <h3 class="name">Hot Beverages</h3>
+                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.</p>
+                    </li>
+                    <li class="recipes-item">
+                        <img src="img/hot-beverages.png" alt="Cold Beverages" 
+                        class="recipes-image">
+                        <h3 class="name">Hot Beverages</h3>
+                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.</p>
+                    </li>
+                    <li class="recipes-item">
+                        <img src="img/hot-beverages.png" alt="Refreshment" 
+                        class="recipes-image">
+                        <h3 class="name">Hot Beverages</h3>
+                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.</p>
+                    </li>
+                    <li class="recipes-item">
+                        <img src="img/hot-beverages.png" alt="Hot Special Combos" 
+                        class="recipes-image">
+                        <h3 class="name">Hot Beverages</h3>
+                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.</p>
+                    </li>
+                    <li class="recipes-item">
+                        <img src="img/hot-beverages.png" alt="Burger and French fries" 
+                        class="recipes-image">
+                        <h3 class="name">Hot Beverages</h3>
+                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.</p>
+                    </li>
+                    <li class="recipes-item">
+                        <img src="img/hot-beverages.png" alt="Dessert" 
+                        class="recipes-image">
+                        <h3 class="name">Hot Beverages</h3>
+                        <p class="text">Wide range of Steaming hot coffee to make you fresh and light.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Creating Testimonials section, idea from https://youtu.be/MYFgtnKMDp4?si=99DXHaX35dnHAhXf -->
+        <section class="testimonials-section" id="testimonials">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="section-content">
+                <div class="slider-container swiper">
+                    <div class="slider-wrapper">
+                        <ul class="testimonials-list swiper-wrapper">
+                            <li class="testimonial swiper-slide">
+                            <img src="img/IMG_8995.JPG" alt="User" class="user-image">
+                            <h3 class="name">Bishal Adhikari</h3>
+                            <i class="feedback">"FoodPad made cooking so easy! I can find recipes for any mood or occasion."</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="img/IMG_8996.JPG" alt="User" class="user-image">
+                            <h3 class="name">Sushil Adhikari</h3>
+                            <i class="feedback">"I love how simple the instructions are. Even as a beginner, I can cook confidently."</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="img/IMG_9002.JPG" alt="User" class="user-image">
+                            <h3 class="name">Anil Bhusal</h3>
+                            <i class="feedback">"The variety of recipes is amazing. I’ve discovered so many new dishes!"</i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="img/IMG_8999.JPG" alt="User" class="user-image">
+                            <h3 class="name">what the heli</h3>
+                            <i class="feedback">"FoodPad feels like having a chef in my kitchen, guiding me step-by-step." </i>
+                        </li>
+                        <li class="testimonial swiper-slide">
+                            <img src="img/IMG_8998.JPG" alt="User" class="user-image">
+                            <h3 class="name">yes sir</h3>
+                            <i class="feedback">"Sharing my own recipes and seeing others try them is the best feeling!"</i>
+                        </li>
+                        </ul>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Creating Contact section, content idea from open ai-->
+         <section class="contact-section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <ul class="contact-info-list">
+                    <li class="contact-info">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        <p>123 Recipe Street, Sydney, NSW 2000, Australia</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-regular fa-envelope"></i>
+                        <p>support@Cookpad.com</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>+61 4 1234 5678</p>
+                    </li>
+                    <li class="contact-info">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>Working hours: Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    </li>
+                </ul>
+
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Your name" class="form-input" required>
+                    <input type="email" placeholder="Your email" class="form-input" required>
+                    <textarea placeholder="Your message" class="form-input" required></textarea>
+                    <button class="button submit-button">Submit</button>
+                </form>
+            </div>
+         </section>
+
+         <!-- Creating Footer Section-->
+          <footer class="footer-section">
+            <div class="section-content">
+                <p class="copyright-text">@ 2025 caption project, Cookpad</p>
+
+                <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <p class="policy-text">
+                    <a href="#" class="policy-link">Privacy policy</a>
+                </p>
+            </div>
+          </footer>
+    </main>
+
+    <!-- Linking Swiper script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Linking custom script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
